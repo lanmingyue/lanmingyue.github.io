@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>跳转中...</title>
+		<script>
+			function getUrlParam(name) {
+				var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+			    var r = window.location.href.substr(1).match(reg);
+			    if (r != null) {
+			        return unescape(r[2]);
+			    }
+			    return null;
+			}
+			var url=getUrlParam('url') || ''
+			if(url!=''){
+				window.location.href=url
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
